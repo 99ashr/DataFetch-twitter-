@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Twitter Details</title>
+	<link rel="stylesheet" href="ash.css">
+</head>
+<body>
+		<h1>My Details</h1>
+
+		<iframe src="" frameborder="0" style="display: none" name="ash"></iframe>
+		<br>
+
+		<h1>Press this button to get my twitter data: </h1>
+
+		<button type="button" onclick="loadDoc()">My Details</button>
+
+		<br>
+		<br>
+
+		<hr>
+
+			<script type="text/javascript">
+				function loadDoc() {
+						var xhttp = new XMLHttpRequest();
+						  xhttp.onreadystatechange = function() {
+					    if (this.readyState == 4 && this.status == 200) {
+					      document.getElementById("ash").innerHTML =
+					      this.responseText;
+					    }
+					  };
+					  xhttp.open("GET", "/cgi/ash.cgi", true);
+					  xhttp.send();
+				}
+	</script>
+
+	
+	<div id="ash"></div>
+
+
+
+
+
+</body>
+</html>

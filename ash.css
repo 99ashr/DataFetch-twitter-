@@ -1,0 +1,16 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	color: firebrick;
+	text-align: center;
+}
+
+button{
+	color: orange;
+	background-color: black;
+	font-size: 40px;
+	margin-left: 45%;
+}
